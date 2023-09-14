@@ -1,51 +1,22 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
-
 @Html.Action("PartialHead", "AdminLayout")
-
 <body class="fix-header fix-sidebar card-no-border">
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-        </svg>
-    </div>
+   @Html.Action("PartialPreloader", "AdminLayout")
     <div id="main-wrapper">
-     @Html.Action("PartialNavbar","AdminLayout")
-     @Html.Action("PartialSidebar","AdminLayout")
+        @Html.Action("PartialNavbar", "AdminLayout")
+        @Html.Action("PartialSidebar", "AdminLayout")
         <div class="page-wrapper">
             <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-7 col-4 align-self-center">
-                        <a href="https://themewagon.com/themes/material-bootstrap-4-free-admin-template/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down">Download Now</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-block">
-                                @RenderBody()
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @Html.Action("PartialRowPageTitle", "AdminLAyout")
+                @RenderBody();
             </div>
-            <footer class="footer">
-                © 2017 Material Pro Admin by wrappixel.com
-            </footer>
+            @Html.Action("PartialFooter","AdminLayout")
         </div>
     </div>
-   @Html.Action("PartialScript","AdminLayout")
+    @Html.Action("PartialScript", "AdminLayout")
 </body>
 </html>

@@ -8,48 +8,48 @@ using System.Web.Mvc;
 
 namespace MyELearningProject.Controllers
 {
-    public class CategoryController : Controller
+    public class InstructorController : Controller
     {
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
-            var values = context.Categories.ToList();
+            var values = context.Instructors.ToList();
             return View(values);
         }
-
         [HttpGet]
-        public ActionResult AddCategory()
+        public ActionResult AddInstructor()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult AddCategory(Category category)
+        public ActionResult AddInstructor(Instructor instructor)
         {
-            context.Categories.Add(category);
+            var value = context.Instructors.Add(instructor);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteCategory(int id)
+        public ActionResult DeleteInstructor(int id)
         {
-            var value = context.Categories.Find(id);
-            context.Categories.Remove(value);
+            var value = context.Instructors.Find(id);
+            context.Instructors.Remove(value);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateCategory(int id)
+        public ActionResult UpdateInstructor(int id)
         {
-            var value = context.Categories.Find(id);
+            var value = context.Instructors.Find(id);
             return View(value);
         }
         [HttpPost]
-        public ActionResult UpdateCategory(Category category)
+        public ActionResult UpdateInstructor(Instructor instructor)
         {
-            var value = context.Categories.Find(category.CategorId);
-            value.CategoryName = category.CategoryName;
+            var value = context.Instructors.Find(instructor.InstructorId);
+            value.Name = instructor.Name;
+            value.Surname = instructor.Surname;
+            value.ImageUrl = instructor.ImageUrl;
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-
     }
 }

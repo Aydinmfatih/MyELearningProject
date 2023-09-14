@@ -130,6 +130,8 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
     <Compile Include="DAL\Entites\Instructor.cs" />
@@ -140,6 +142,10 @@
     <Compile Include="Migrations\202309071828185_mig1.cs" />
     <Compile Include="Migrations\202309071828185_mig1.designer.cs">
       <DependentUpon>202309071828185_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309121903399_mig_add_imageurl_instructor.cs" />
+    <Compile Include="Migrations\202309121903399_mig_add_imageurl_instructor.designer.cs">
+      <DependentUpon>202309121903399_mig_add_imageurl_instructor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -799,6 +805,16 @@
     <Content Include="Views\AdminLayout\PartialSidebar.cshtml" />
     <Content Include="Views\AdminLayout\PartialScript.cshtml" />
     <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
+    <Content Include="Views\AdminLayout\PartialRowPageTitle.cshtml" />
+    <Content Include="Views\AdminLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\AddInstructor.cshtml" />
+    <Content Include="Views\Instructor\UpdateInstructor.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -820,6 +836,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202309071828185_mig1.resx">
       <DependentUpon>202309071828185_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309121903399_mig_add_imageurl_instructor.resx">
+      <DependentUpon>202309121903399_mig_add_imageurl_instructor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
