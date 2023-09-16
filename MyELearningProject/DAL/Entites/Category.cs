@@ -12,5 +12,6 @@ namespace MyELearningProject.DAL.Entites
         public int CategorId { get; set; }
         public string CategoryName { get; set; }
 
+        public List<Course> Courses { get; set; }
     }
 }

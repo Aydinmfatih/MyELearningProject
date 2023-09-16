@@ -14,5 +14,6 @@ namespace MyELearningProject.DAL.Entites
         public string Surname { get; set; }
         public string ImageUrl { get; set; }
 
+        public List<Course> Courses { get; set; }
     }
 }

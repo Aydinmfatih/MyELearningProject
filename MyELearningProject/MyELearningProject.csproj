@@ -129,12 +129,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
+    <Compile Include="DAL\Entites\Course.cs" />
+    <Compile Include="DAL\Entites\CourseRegister.cs" />
     <Compile Include="DAL\Entites\Instructor.cs" />
+    <Compile Include="DAL\Entites\Student.cs" />
     <Compile Include="DAL\Entites\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +151,30 @@
     <Compile Include="Migrations\202309121903399_mig_add_imageurl_instructor.cs" />
     <Compile Include="Migrations\202309121903399_mig_add_imageurl_instructor.designer.cs">
       <DependentUpon>202309121903399_mig_add_imageurl_instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141723006_mig_add_student_table.cs" />
+    <Compile Include="Migrations\202309141723006_mig_add_student_table.designer.cs">
+      <DependentUpon>202309141723006_mig_add_student_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141828588_mig_add_course.cs" />
+    <Compile Include="Migrations\202309141828588_mig_add_course.designer.cs">
+      <DependentUpon>202309141828588_mig_add_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141833439_mig_add_relation.cs" />
+    <Compile Include="Migrations\202309141833439_mig_add_relation.designer.cs">
+      <DependentUpon>202309141833439_mig_add_relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141849064_mig_test.cs" />
+    <Compile Include="Migrations\202309141849064_mig_test.designer.cs">
+      <DependentUpon>202309141849064_mig_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141850322_mig_test1.cs" />
+    <Compile Include="Migrations\202309141850322_mig_test1.designer.cs">
+      <DependentUpon>202309141850322_mig_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309141913330_mig_add_register_course.cs" />
+    <Compile Include="Migrations\202309141913330_mig_add_register_course.designer.cs">
+      <DependentUpon>202309141913330_mig_add_register_course.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -815,6 +844,10 @@
     <Content Include="Views\Instructor\UpdateInstructor.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\AddStudent.cshtml" />
+    <Content Include="Views\Student\UpdateStudent.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -839,6 +872,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309121903399_mig_add_imageurl_instructor.resx">
       <DependentUpon>202309121903399_mig_add_imageurl_instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141723006_mig_add_student_table.resx">
+      <DependentUpon>202309141723006_mig_add_student_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141828588_mig_add_course.resx">
+      <DependentUpon>202309141828588_mig_add_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141833439_mig_add_relation.resx">
+      <DependentUpon>202309141833439_mig_add_relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141849064_mig_test.resx">
+      <DependentUpon>202309141849064_mig_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141850322_mig_test1.resx">
+      <DependentUpon>202309141850322_mig_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309141913330_mig_add_register_course.resx">
+      <DependentUpon>202309141913330_mig_add_register_course.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
