@@ -135,6 +135,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
+    <Compile Include="DAL\Entites\BreadcrumbItem.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
     <Compile Include="DAL\Entites\Course.cs" />
     <Compile Include="DAL\Entites\CourseRegister.cs" />

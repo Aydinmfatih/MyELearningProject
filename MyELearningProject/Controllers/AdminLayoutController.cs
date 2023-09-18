@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyELearningProject.DAL.Entites;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,6 +33,15 @@ namespace MyELearningProject.Controllers
         }
         public PartialViewResult PartialRowPageTitle()
         {
+            ViewBag.Breadcrumb = new List<BreadcrumbItem>
+        {
+            new BreadcrumbItem { Text = "Ana Sayfa", Url = Url.Action("Index", "Home") },
+            new BreadcrumbItem { Text = "Kategoriler", Url = Url.Action("Index", "Category") },
+            new BreadcrumbItem { Text = "Kurslar", Url = Url.Action("Index", "Course") }
+        };
+
+           
+
             return PartialView();
         }
         public PartialViewResult PartialPreloader()
