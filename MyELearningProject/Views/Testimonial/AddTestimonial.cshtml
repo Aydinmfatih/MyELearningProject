@@ -18,8 +18,14 @@
     <input type="text" name="ImageUrl" class="form-control" />
     <br /> <br />
     <label>Referans Yorumu</label>
-    <textarea rows="5"></textarea>
+    <textarea name="Comment" class="form-control" rows="5"></textarea>
     <br /> <br />
-    <label>Reü**ferans Statüsü</label>
-    <button class="btn btn-primary">Eğitmeni Kaydet</button>
-</form>1-*589
+    <label>Referans Statüsü</label>
+    <select name="Status" class="form-control">
+        <option value="">Durum Seçiniz</option>
+        <option value="true">Aktif</option>
+        <option value="false">Pasif</option>
+    </select>
+    <br /> <br />
+    <button class="btn btn-primary">Referans Kaydet</button>
+</form>

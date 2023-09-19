@@ -9,7 +9,7 @@ namespace MyELearningProject.DAL.Entites
     public class Category
     {
         [Key]
-        public int CategorId { get; set; }
+        public int CategoryId { get; set; }
         public string CategoryName { get; set; }
 
         public List<Course> Courses { get; set; }

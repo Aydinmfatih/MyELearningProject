@@ -9,7 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MyELearningProject.DAL.Context.ELearningContext context)

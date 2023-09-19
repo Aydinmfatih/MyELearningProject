@@ -36,6 +36,25 @@ namespace MyELearningProject.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult UpdateTestimonial(int id)
+        {
+            var value = context.Testimonials.Find(id);
+            return View(value);
+
+        }
+        [HttpPost]
+        public ActionResult UpdateTestimonial(Testimonial testimonial)
+        {
+            var value = context.Testimonials.Find(testimonial.TestimonialId);
+            value.NameSurname = testimonial.NameSurname;
+            value.Title = testimonial.Title;
+            value.ImageUrl = testimonial.ImageUrl;
+            value.Comment = testimonial.Comment;
+            value.Status = testimonial.Status;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

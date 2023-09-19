@@ -7,13 +7,13 @@ namespace MyELearningProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class mig_add_register_course : IMigrationMetadata
+    public sealed partial class mig : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(mig_add_register_course));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(mig));
         
         string IMigrationMetadata.Id
         {
-            get { return "202309141913330_mig_add_register_course"; }
+            get { return "202309192213593_mig"; }
         }
         
         string IMigrationMetadata.Source

@@ -12,25 +12,35 @@
             <div class="card-block">
                 Öğrenci Listesi
                 <br />
-                <table class="table table-bordered">
-                    <tr>
-                        <th>#</th>
-                        <th>Adı Soyadı</th>
-                        <th>Sil</th>
-                        <th>Güncelle</th>
-                        <th>Kurslar</th>
-                    </tr>
-                    @foreach (var item in Model)
-                    {
+                @if (Model.Count == 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Hiçbir Veri Bulunamadı
+                    </div>
+                }
+                else
+                {
+                    <table class="table table-bordered">
                         <tr>
-                            <td>@item.StudentId</td>
-                            <td>@item.Name @item.Surname</td>
-                            <td><a href="/Student/DeleteStudent/@item.StudentId" class="btn btn-outline-danger">Sil</a></td>
-                            <td><a href="/Student/UpdateStudent/@item.StudentId" class="btn btn-outline-success">Güncelle</a></td>
-                            <td><a href="/Instructor/#/@item.StudentId" class="btn btn-outline-warning">Kurslar</a></td>
+                            <th>#</th>
+                            <th>Adı Soyadı</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                            <th>Kurslar</th>
                         </tr>
-                    }
-                </table>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.StudentId</td>
+                                <td>@item.Name @item.Surname</td>
+                                <td><a href="/Student/DeleteStudent/@item.StudentId" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Student/UpdateStudent/@item.StudentId" class="btn btn-outline-success">Güncelle</a></td>
+                                <td><a href="/Instructor/#/@item.StudentId" class="btn btn-outline-warning">Kurslar</a></td>
+                            </tr>
+                        }
+                    </table>
+                }
+
                 <a href="/Student/AddStudent" class="btn btn-outline-primary">Yeni Öğrenci Girişi</a>
             </div>
         </div>

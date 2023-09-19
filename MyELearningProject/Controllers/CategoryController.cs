@@ -45,7 +45,7 @@ namespace MyELearningProject.Controllers
         [HttpPost]
         public ActionResult UpdateCategory(Category category)
         {
-            var value = context.Categories.Find(category.CategorId);
+            var value = context.Categories.Find(category.CategoryId);
             value.CategoryName = category.CategoryName;
             context.SaveChanges();
             return RedirectToAction("Index");
