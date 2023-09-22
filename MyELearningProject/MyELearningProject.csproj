@@ -138,6 +138,7 @@
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
+    <Compile Include="DAL\Entites\Comment.cs" />
     <Compile Include="DAL\Entites\Course.cs" />
     <Compile Include="DAL\Entites\CourseRegister.cs" />
     <Compile Include="DAL\Entites\Instructor.cs" />
@@ -149,6 +150,14 @@
     <Compile Include="Migrations\202309192213593_mig.cs" />
     <Compile Include="Migrations\202309192213593_mig.designer.cs">
       <DependentUpon>202309192213593_mig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309221720485_mig_add_comment.cs" />
+    <Compile Include="Migrations\202309221720485_mig_add_comment.designer.cs">
+      <DependentUpon>202309221720485_mig_add_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309221731009_mig_add_comment_relation.cs" />
+    <Compile Include="Migrations\202309221731009_mig_add_comment_relation.designer.cs">
+      <DependentUpon>202309221731009_mig_add_comment_relation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -828,6 +837,7 @@
     <Content Include="Views\InstructorAnalysis\Index.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListyInstructor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -850,6 +860,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202309192213593_mig.resx">
       <DependentUpon>202309192213593_mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309221720485_mig_add_comment.resx">
+      <DependentUpon>202309221720485_mig_add_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309221731009_mig_add_comment_relation.resx">
+      <DependentUpon>202309221731009_mig_add_comment_relation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

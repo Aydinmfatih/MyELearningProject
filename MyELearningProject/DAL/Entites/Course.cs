@@ -13,6 +13,8 @@ namespace MyELearningProject.DAL.Entites
         public int Duration { get; set; }
         public string ImageUrl { get; set; }
 
+
+       
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
@@ -20,5 +22,7 @@ namespace MyELearningProject.DAL.Entites
         public virtual Instructor Instructor { get; set; }
 
         public List<CourseRegister> CourseRegisters { get; set; }
+
+        public List<Comment> Comment { get; set; }
     }
 }
