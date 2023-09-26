@@ -142,6 +142,7 @@
     <Compile Include="DAL\Entites\Course.cs" />
     <Compile Include="DAL\Entites\CourseRegister.cs" />
     <Compile Include="DAL\Entites\Instructor.cs" />
+    <Compile Include="DAL\Entites\Review.cs" />
     <Compile Include="DAL\Entites\Student.cs" />
     <Compile Include="DAL\Entites\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
@@ -158,6 +159,10 @@
     <Compile Include="Migrations\202309221731009_mig_add_comment_relation.cs" />
     <Compile Include="Migrations\202309221731009_mig_add_comment_relation.designer.cs">
       <DependentUpon>202309221731009_mig_add_comment_relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309261857304_mig_add_review.cs" />
+    <Compile Include="Migrations\202309261857304_mig_add_review.designer.cs">
+      <DependentUpon>202309261857304_mig_add_review.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -866,6 +871,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309221731009_mig_add_comment_relation.resx">
       <DependentUpon>202309221731009_mig_add_comment_relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309261857304_mig_add_review.resx">
+      <DependentUpon>202309261857304_mig_add_review.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
