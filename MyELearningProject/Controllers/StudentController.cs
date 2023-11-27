@@ -15,6 +15,7 @@ namespace MyELearningProject.Controllers
         public ActionResult Index()
         {
             var values = context.Students.ToList();
+            TempData["BreadCrumb"] = "Öğrenciler";
             return View(values);
         }
         [HttpGet]
