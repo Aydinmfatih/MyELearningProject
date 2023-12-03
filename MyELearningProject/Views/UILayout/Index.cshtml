@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "UILayout")
+
+<body>
+    <!-- Spinner Start -->
+  @Html.Action("PartialScript", "UILayout")
+    <!-- Spinner End -->
+    <!-- Navbar Start -->
+    @Html.Action("PartialNavbar", "UILayout")
+    <!-- Navbar End -->
+    @RenderBody()
+    <!-- Footer Start -->
+   @Html.Action("PartialFooter", "UILayout")
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <!-- JavaScript Libraries -->
+    @Html.Action("PartialScript", "UILayout")   
+</body>
+
+</html>

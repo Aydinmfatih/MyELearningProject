@@ -1,0 +1,14 @@
+﻿@model MyELearningProject.DAL.Entites.AboutList
+@{
+    ViewBag.Title = "AddAboutList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımızda Liste Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Hakkımızda Listesi Başlığı Giriniz</label>
+    @Html.TextBoxFor(x => x.AboutListTitle, new { @class = "form-control" })
+    <br />  <br />
+    <button class="btn btn-primary">Önde çıkarılanı Kaydet</button>
+</form>

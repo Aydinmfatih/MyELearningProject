@@ -1,0 +1,53 @@
+﻿@model List<MyELearningProject.DAL.Entites.AboutFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Hakkımızda Öne çıkan</h2>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Hakkımızda Feature Listesi
+                <br />
+                @if (Model.Count == 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Hiçbir Veri Bulunamadı
+                    </div>
+                }
+                else
+                {
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>#</th>
+                            <th>Hakkımızda İconu</th>
+                            <th>Hakkımzıda Başlığı</th>
+                            <th>Hakkımızda Açıklaması</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.AboutFeatureId</td>
+                                <td>@item.AboutIcon</td>
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td><a href="/AboutFeature/DeleteAboutFeature/@item.AboutFeatureId" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/AboutFeature/UpdateAboutFeature/@item.AboutFeatureId" class="btn btn-outline-success">Güncelle</a></td>
+                            </tr>
+                        }
+                    </table>
+                }
+
+                <a href="/AboutFeature/AddAboutFeature" class="btn btn-outline-primary">Yeni Hakkımızda Feature Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

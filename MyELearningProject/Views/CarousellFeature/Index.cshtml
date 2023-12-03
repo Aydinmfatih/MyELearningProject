@@ -1,0 +1,50 @@
+﻿@model List<MyELearningProject.DAL.Entites.CarousellFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Öne çıkarılan kaydırma resim</h2>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Öne çıkarılan Listesi
+                <br />
+                @if (Model.Count == 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Hiçbir Veri Bulunamadı
+                    </div>
+                }
+                else
+                {
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>#</th>
+                            <th> Başlığı</th>
+                            <th> Alt Başlığı</th>
+                            <th> Açıklaması</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CarousellFeatureId</td>
+                                <td>@item.Title</td>
+                                <td>@item.Title2</td>
+                                <td>@item.Description</td>
+                                <td><a href="/CarousellFeature/DeleteCarousellFeature/@item.CarousellFeatureId" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/CarousellFeature/UpdateCarousellFeature/@item.CarousellFeatureId" class="btn btn-outline-success">Güncelle</a></td>
+                            </tr>
+                        }
+                    </table>
+                }
+
+                <a href="/CarousellFeature/AddCarousellFeature" class="btn btn-outline-primary">Yeni Hakkımızda Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

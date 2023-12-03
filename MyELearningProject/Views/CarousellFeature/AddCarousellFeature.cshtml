@@ -1,0 +1,20 @@
+﻿@model MyELearningProject.DAL.Entites.CarousellFeature
+@{
+    ViewBag.Title = "AddCarousellFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Kaydırmalı Öne çıkarılan Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Hakkımızda Başlığını Giriniz</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />  <br />
+    <label>Hakkımıza Alt Başlığını Giriniz</label>
+    @Html.TextBoxFor(x => x.Title2, new { @class = "form-control" })
+    <br />  <br />
+    <label>Hakkımızda Açıklamasını Giriniz</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @rows = 5 })
+    <br />  <br />
+    <button class="btn btn-primary"> Kaydet</button>
+</form>
