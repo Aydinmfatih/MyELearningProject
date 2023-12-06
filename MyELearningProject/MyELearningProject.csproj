@@ -1035,6 +1035,9 @@
     <Content Include="Views\Default\PartialFeatureCarousell.cshtml" />
     <Content Include="Views\CarousellFeature\Index.cshtml" />
     <Content Include="Views\CarousellFeature\AddCarousellFeature.cshtml" />
+    <Content Include="Views\Default\PartialServices.cshtml" />
+    <Content Include="Views\Default\PartialAboutUs.cshtml" />
+    <Content Include="Views\Default\PartialAboutList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

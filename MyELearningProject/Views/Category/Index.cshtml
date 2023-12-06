@@ -22,6 +22,7 @@
                         <tr>
                             <th>#</th>
                             <th>Kategori Adı</th>
+                            <th>Görel Yolu</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
                         </tr>
@@ -30,6 +31,7 @@
                             <tr>
                                 <td>@item.CategoryId</td>
                                 <td>@item.CategoryName</td>
+                                <td>@item.ImageUrl</td>
                                 <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
                                 <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
                                 <td></td>

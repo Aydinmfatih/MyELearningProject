@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyELearningProject.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace MyELearningProject.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        ELearningContext contex = new ELearningContext();
         public ActionResult Index()
         {
             return View();
@@ -16,8 +17,26 @@ namespace MyELearningProject.Controllers
 
         public PartialViewResult PartialFeatureCarousell()
         {
-            return PartialView();
+            var values = contex.CarousellFeatures.ToList();
+            return PartialView(values);
         }
+
+        public PartialViewResult PartialServices()
+        {
+            var values = contex.AboutFeatures.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialAboutUs()
+        {
+            var values = contex.Abouts.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialAboutList()
+        {
+            var values = contex.AboutLists.ToList();
+            return PartialView(values);
+        }
+
 
     }
 }
