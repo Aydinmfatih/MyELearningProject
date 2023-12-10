@@ -1,0 +1,253 @@
+﻿﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+@Html.Action("PartialHead","Profile")
+
+<body class="fix-header fix-sidebar card-no-border">
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        </b>
+                        <!-- Logo text --><span>
+
+                            <!-- Light Logo text -->
+                        <h3 style="color:white">Öğrenci Yönetim Paneli</h3>
+                        </span>
+                    </a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item hidden-sm-down search-box">
+                            <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/Templates/material-lite-master/assets/images/users/4.jpg" style="height:50px; width:50px" alt="user" class="profile-pic m-r-10" />Hoşgeldiniz</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Profile/Index/" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Profile/StudentPage/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profilim</span></a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Profile/MyCourseList/" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Kurslarım</span></a>
+                        </li>
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="/Default/Index/" class="btn waves-effect waves-light btn-warning hidden-md-down">Siteye Git</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <div class="sidebar-footer">
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="/Login/Index/" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+            </div>
+            <!-- End Bottom points-->
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <div class="col-md-5 col-8 align-self-center">
+                        <h3 class="text-themecolor">Dashboard</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-7 col-4 align-self-center">
+                        <a href="https://themewagon.com/themes/bootstrap-4-responsive-admin-template/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down">Kaynakları İndir</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
+                        <!-- Column -->
+                        <div class="card">
+                            <img class="card-img-top" src="~/Templates/material-lite-master/assets/images/background/profile-bg.jpg" alt="Card image cap">
+                            <div class="card-block little-profile text-center">
+                                <div class="pro-img"><img src="~/Templates/material-lite-master/assets/images/users/4.jpg" alt="user" /></div>
+                                <h3 class="m-b-0">@ViewBag.name</h3>
+                                <p>Junior .Net Developer</p>
+
+                                <div class="row text-center m-t-20">
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h3 class="m-b-0 font-light">2</h3><small>Kurs Sayısı</small>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h3 class="m-b-0 font-light">4</h3><small>Sertifika Sayısı</small>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 m-t-20">
+                                        <h3 class="m-b-0 font-light">1</h3><small>Takip Edilen Eğitmen</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+
+                    </div>
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs profile-tab" role="tablist">
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Aktivite</a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profil</a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Bilgilerim</a> </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <div class="card-block">
+                                        <div class="profiletimeline">
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="~/Templates/material-lite-master/assets/images/users/1.jpg" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div>
+                                                        <a href="#" class="link">John Doe</a> <span class="sl-date">5 dakika önce</span>
+                                                        <p>assign a new task <a href="#"> Design weblayout</a></p>
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="~/Templates/material-lite-master/assets/images/big/img1.jpg" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="~/Templates/material-lite-master/assets/images/big/img2.jpg" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="~/Templates/material-lite-master/assets/images/big/img3.jpg" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="~/Templates/material-lite-master/assets/images/big/img4.jpg" alt="user" class="img-responsive radius"></div>
+                                                        </div>
+                                                        <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="~/Templates/material-lite-master/assets/images/users/2.jpg" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div>
+                                                        <a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                        <div class="m-t-20 row">
+                                                            <div class="col-md-3 col-xs-12"><img src="~/Templates/material-lite-master/assets/images/big/img1.jpg" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="#" class="btn btn-success"> Design weblayout</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--second tab-->
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                                    <div class="card-block">
+                                        <div class="row">
+                                            <div class="col-md-3 col-xs-6 b-r">
+                                                <strong>İsim Soyisim</strong>
+                                                <br>
+                                                <p class="text-muted">@ViewBag.name</p>
+                                            </div>
+                                           
+                                            <div class="col-md-3 col-xs-6 b-r">
+                                                <strong>Email</strong>
+                                                <br>
+                                                <p class="text-muted">@ViewBag.mail</p>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <strong>Konum</strong>
+                                                <br>
+                                                <p class="text-muted">Türkiye</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p>
+                                            Merhaba! Ben @ViewBag.name, yeni mezun bir bilgisayar mühendisiyim ve ASP.NET Core ile web geliştirme konusunda tutkulu bir junior yazılımcıyım. Öğrenmeye ve kendimi geliştirmeye her zaman açık olan biriyim.
+
+                                            Üniversite eğitimim süresince, ASP.NET Core ve C# üzerine yoğunlaştım ve projelerde bu teknolojileri başarıyla kullanarak deneyim kazandım. MVC mimarisine hakimim ve veritabanı işlemleri için Entity Framework Core'u kullanma konusunda yetenekliyim. Front-end tarafında da JavaScript, HTML, CSS bilgilerim bulunmaktadır.
+
+                                            Projelerimde takım çalışmasına ve problem çözme becerilerine odaklanarak, yenilikçi ve etkileyici çözümler üretmeye özen gösterdim. İlgili teknolojilere hakimiyetimi güncel tutmak için sürekli olarak yeni şeyler öğreniyorum ve kendi kendime gelişimimi sağlamak için çaba harcıyorum.
+                                        </p>
+                                        <h4 class="font-medium m-t-30">Yetenekler</h4>
+                                        <hr>
+                                        <h5 class="m-t-30">ASP.Net Core Web Geliştirme <span class="pull-right">80%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                        </div>
+                                        <h5 class="m-t-30">API Consume<span class="pull-right">90%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                        </div>
+                                        <h5 class="m-t-30">jQuery <span class="pull-right">50%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                        </div>
+                                        <h5 class="m-t-30">Photoshop <span class="pull-right">70%</span></h5>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="settings" role="tabpanel">
+                                    <div class="card-block">
+                                        <form class="form-horizontal form-material">
+                                            <div class="form-group">
+                                                <label class="col-md-12">İsim Soyisim</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="@ViewBag.name" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-email" class="col-md-12">Email</label>
+                                                <div class="col-md-12">
+                                                    <input type="email" placeholder="@ViewBag.mail" class="form-control form-control-line" name="example-email" id="example-email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <button class="btn btn-success">Profili Güncelle</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer"> © @DateTime.Now.Year Tüm Hakları Saklıdır.</footer>
+        </div>
+    </div>
+    @Html.Action("PartialScript","Profile")
+</body>
+
+</html>

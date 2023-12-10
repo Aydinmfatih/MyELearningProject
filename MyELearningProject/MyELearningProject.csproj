@@ -150,6 +150,7 @@
     <Compile Include="DAL\Entites\About.cs" />
     <Compile Include="DAL\Entites\AboutFeature.cs" />
     <Compile Include="DAL\Entites\AboutList.cs" />
+    <Compile Include="DAL\Entites\AdminRole.cs" />
     <Compile Include="DAL\Entites\CarousellFeature.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
     <Compile Include="DAL\Entites\Comment.cs" />
@@ -223,6 +224,10 @@
     <Compile Include="Migrations\202312101832167_mig_add_proccess.cs" />
     <Compile Include="Migrations\202312101832167_mig_add_proccess.designer.cs">
       <DependentUpon>202312101832167_mig_add_proccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312102055008_mig_add_adminrole.cs" />
+    <Compile Include="Migrations\202312102055008_mig_add_adminrole.designer.cs">
+      <DependentUpon>202312102055008_mig_add_adminrole.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1174,7 +1179,14 @@
     <Content Include="Templates\Login_v1\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="Views\Login\PartialHead.cshtml" />
     <Content Include="Views\Login\PartialScript.cshtml" />
+    <Content Include="Views\Profile\MyCourseList.cshtml" />
+    <Content Include="Views\Login\StudentLogin.cshtml" />
+    <Content Include="Views\Login\AdminLogin.cshtml" />
+    <Content Include="Views\Login\InstructorLogin.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\PartialHead.cshtml" />
+    <Content Include="Views\Profile\PartialScript.cshtml" />
+    <Content Include="Views\Profile\StudentPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1238,6 +1250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312101832167_mig_add_proccess.resx">
       <DependentUpon>202312101832167_mig_add_proccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312102055008_mig_add_adminrole.resx">
+      <DependentUpon>202312102055008_mig_add_adminrole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

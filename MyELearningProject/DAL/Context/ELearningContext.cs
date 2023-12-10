@@ -37,6 +37,8 @@ namespace MyELearningProject.DAL.Context
 
         public DbSet<Process> Processes { get; set; }
 
+        public DbSet<AdminRole> AdminRoles { get; set; }
+
         
         
 

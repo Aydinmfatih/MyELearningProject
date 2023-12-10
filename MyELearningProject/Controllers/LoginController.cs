@@ -18,12 +18,18 @@ namespace MyELearningProject.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Index(Student student)
+
+        [HttpGet]
+        public ActionResult StudentLogin( )
         {
-           
+            return View();
+        } 
+        
+        [HttpPost]
+        public ActionResult StudentLogin(Student student)
+        {
             var values = context.Students.FirstOrDefault(x => x.Email == student.Email && x.Password == student.Password);
-            if (values!=null)
+            if (values != null)
             {
                 FormsAuthentication.SetAuthCookie(values.Email, false);
                 Session["CurrentMail"] = values.Email;
@@ -32,6 +38,33 @@ namespace MyELearningProject.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AdminLogin(AdminRole admin)
+        {
+            var values = context.AdminRoles.FirstOrDefault(x => x.Email == admin.Email && x.Password == admin.Password);
+            if (values != null)
+            {
+                FormsAuthentication.SetAuthCookie(values.Email, false);
+                Session["CurrentMail"] = values.Email;
+                Session.Timeout = 60;
+                return RedirectToAction("Index", "About");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult InstructorLogin()
+        {
+            return View();
+        }
+
 
 
         public PartialViewResult PartialHead()
