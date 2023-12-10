@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CarousellFeatureController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -140,6 +141,8 @@
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\UIAboutController.cs" />
+    <Compile Include="Controllers\UICourseController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entites\About.cs" />
@@ -148,6 +151,7 @@
     <Compile Include="DAL\Entites\CarousellFeature.cs" />
     <Compile Include="DAL\Entites\Category.cs" />
     <Compile Include="DAL\Entites\Comment.cs" />
+    <Compile Include="DAL\Entites\Contact.cs" />
     <Compile Include="DAL\Entites\Course.cs" />
     <Compile Include="DAL\Entites\CourseRegister.cs" />
     <Compile Include="DAL\Entites\Instructor.cs" />
@@ -204,6 +208,14 @@
     <Compile Include="Migrations\202312032307593_mig_add_Feature1.cs" />
     <Compile Include="Migrations\202312032307593_mig_add_Feature1.designer.cs">
       <DependentUpon>202312032307593_mig_add_Feature1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312061451308_mig_contact_add.cs" />
+    <Compile Include="Migrations\202312061451308_mig_contact_add.designer.cs">
+      <DependentUpon>202312061451308_mig_contact_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312061452452_mig_contact_add1.cs" />
+    <Compile Include="Migrations\202312061452452_mig_contact_add1.designer.cs">
+      <DependentUpon>202312061452452_mig_contact_add1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -932,7 +944,7 @@
     <Content Include="Views\InstructorAnalysis\Index.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
-    <Content Include="Views\InstructorAnalysis\CourseListyInstructor.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
     <Content Include="Templates\elearning-html-template\lib\owlcarousel\LICENSE" />
     <Content Include="Templates\elearning-html-template\scss\bootstrap.scss" />
     <Content Include="Templates\elearning-html-template\scss\bootstrap\scss\bootstrap-grid.scss" />
@@ -1038,6 +1050,14 @@
     <Content Include="Views\Default\PartialServices.cshtml" />
     <Content Include="Views\Default\PartialAboutUs.cshtml" />
     <Content Include="Views\Default\PartialAboutList.cshtml" />
+    <Content Include="Views\Default\PartialCategory.cshtml" />
+    <Content Include="Views\Default\PartialCourse.cshtml" />
+    <Content Include="Views\Default\PartialInstructor.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\UIAbout\Index.cshtml" />
+    <Content Include="Views\UICourse\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\AdminContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1092,6 +1112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312032307593_mig_add_Feature1.resx">
       <DependentUpon>202312032307593_mig_add_Feature1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312061451308_mig_contact_add.resx">
+      <DependentUpon>202312061451308_mig_contact_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312061452452_mig_contact_add1.resx">
+      <DependentUpon>202312061452452_mig_contact_add1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

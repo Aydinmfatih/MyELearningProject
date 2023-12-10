@@ -36,7 +36,7 @@ namespace MyELearningProject.Controllers
             return PartialView(v3);
         }
 
-        public PartialViewResult CourseListyInstructor()
+        public PartialViewResult CourseListByInstructor()
         {
             var v1 = context.Courses.Where(x => x.InstructorId == 1).ToList();
             return PartialView(v1);

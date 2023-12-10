@@ -33,6 +33,8 @@ namespace MyELearningProject.DAL.Context
 
         public DbSet<CarousellFeature> CarousellFeatures { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; }
+
         
         
 

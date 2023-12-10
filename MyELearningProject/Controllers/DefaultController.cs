@@ -36,6 +36,29 @@ namespace MyELearningProject.Controllers
             var values = contex.AboutLists.ToList();
             return PartialView(values);
         }
+        public PartialViewResult PartialCategory()
+        {
+            var values = contex.Categories.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialCourse()
+        {
+            var values = contex.Courses.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialInstructor()
+        {
+            var values = contex.Instructors.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialTestimonial()
+        {
+            var values = contex.Testimonials.ToList();
+            return PartialView(values);
+        }
+
+
+
 
 
     }
