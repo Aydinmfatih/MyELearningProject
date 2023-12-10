@@ -13,6 +13,7 @@ namespace MyELearningProject.Controllers
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
+            TempData["BreadCrumb"] = "Kategoriler";
             return View();
         }
 

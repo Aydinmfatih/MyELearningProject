@@ -7,15 +7,14 @@
 
             <div class="sl-item">
 
-                <div class="sl-left"> <img src="~/Templates/material-lite-master/assets/images/users/2.jpg" alt="user" class="img-circle"> </div>
                 <div class="sl-right">
                     <div>
-                        <a href="#" class="link">@item.Instructor.Name @item.Instructor.Surname</a> <span class="sl-date">@item.Duration</span>
+                        <a href="#" class="link">@item.Instructor.Name @item.Instructor.Surname</a> <span class="sl-date">@item.Duration Dakika</span>
                         <div class="m-t-20 row">
-                            <div class="col-md-3 col-xs-12"><img src="~/Templates/material-lite-master/assets/images/big/img1.jpg" alt="user" class="img-responsive radius"></div>
+                            <div class="col-md-3 col-xs-12"><img src="@item.ImageUrl" alt="user" class="img-responsive radius"></div>
                             <div class="col-md-9 col-xs-12">
                                 <p>
-                                    Lorem ipsum
+                                    @item.Title
                                 </p> <a href="#" class="btn btn-success"> Kursa Gitsin</a>
                             </div>
                         </div>

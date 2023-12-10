@@ -11,7 +11,7 @@
             <div class="pro-img"><img src="@item.ImageUrl" alt="user" /></div>
             <h3 class="m-b-0">@item.Name @item.Surname</h3>
             <p>@item.Title </p>
-            <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
+            <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Değerlendir</a>
             <div class="row text-center m-t-20">
                 <div class="col-lg-4 col-md-4 m-t-20">
                     <h3 class="m-b-0 font-light">@ViewBag.courseCount</h3><small>Kurs sayısı</small>
@@ -20,7 +20,7 @@
                     <h3 class="m-b-0 font-light">@ViewBag.commentCount</h3><small>Yorum sayısı</small>
                 </div>
                 <div class="col-lg-4 col-md-4 m-t-20">
-                    <h3 class="m-b-0 font-light">6035</h3><small>Following</small>
+                    <h3 class="m-b-0 font-light">@ViewBag.averageScore</h3><small>Değerlendirme</small>
                 </div>
             </div>
         </div>

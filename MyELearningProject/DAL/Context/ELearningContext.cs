@@ -35,6 +35,8 @@ namespace MyELearningProject.DAL.Context
 
         public DbSet<Contact> Contacts { get; set; }
 
+        public DbSet<Process> Processes { get; set; }
+
         
         
 

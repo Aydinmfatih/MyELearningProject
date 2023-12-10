@@ -13,6 +13,7 @@ namespace MyELearningProject.Controllers
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
+            TempData["BreadCrumb"] = "Referanslar";
             var values = context.Testimonials.ToList();
             return View(values);
         }

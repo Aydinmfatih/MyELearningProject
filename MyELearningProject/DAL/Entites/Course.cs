@@ -25,5 +25,6 @@ namespace MyELearningProject.DAL.Entites
 
         public List<Comment> Comment { get; set; }
         public List<Review> Reviews { get; set; }
+        public List<Process> Processes { get; set; }
     }
 }
