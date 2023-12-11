@@ -48,7 +48,12 @@ Bu repository, M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde gerçekl
 ![image](https://github.com/Aydinmfatih/MyELearningProject/assets/46519508/39b041ec-e47a-46c7-8f0c-6e3f0bc3122a)
 ![image](https://github.com/Aydinmfatih/MyELearningProject/assets/46519508/64bd5a3c-0c7d-444f-b463-4630fc4748ec)
 
-
+## Nasıl Başlanır
+* Repository'yi klonlayın.
+* Visual Studio'da projeyi açın.
+* Gerekli bağımlılıkları yükleyin.
+* Veritabanını oluşturun.
+* Projeyi başlatın.
 
 
 
